@@ -20,6 +20,7 @@ router.get("/", (req, res) => {
 // POST /enquete/voto — corpo { opcao }: incrementa o voto daquela opção.
 //   `opcao` é um TEXTO (string): o NOME de uma opção existente (ex.: "Presencial").
 router.post("/voto", (req, res) => {
+  
   // TODO (Tarefa C):
   //  1. Leia `opcao` (texto) de req.body.
   //  2. Procure a opção cujo `nome` seja igual a esse texto em `opcoes`.

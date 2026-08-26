@@ -15,6 +15,7 @@ router.get("/", (req, res) => {
 
 // POST /links — cria um link { titulo, url } (ambos TEXTO/string).
 router.post("/", (req, res) => {
+  
   // TODO (Tarefa B):
   //  1. Leia titulo (texto) e url (texto) de req.body.
   //  2. Se faltar titulo OU url, responda 400.
