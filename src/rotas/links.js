@@ -1,10 +1,16 @@
+const express = require("express");
+const router = express.Router();
+
+
+let links = [];
+let proximoId = 1;
 
 router.get("/", (req, res) => {
   res.status(200).json(links);
 });
 
 
-router.post("/", (req, res) => {
+router.post("/links", (req, res) => {
   const { titulo, url } = req.body;
 
   if (!titulo || !url) {
@@ -16,3 +22,5 @@ router.post("/", (req, res) => {
 
   res.status(201).json(novoLink);
 });
+
+module.exports = router;
