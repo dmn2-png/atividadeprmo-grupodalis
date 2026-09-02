@@ -16,16 +16,13 @@ router.get("/", (req, res) => {
 
 
 router.post("/voto", (req, res) => {
-  const { opcao } = req.body;
   
-  const encontrada = opcoes.find((item) => item.nome === opcao);
-
-  if (!encontrada) {
-    return res.status(400).json({ erro: "Opção não encontrada" });
-  }
-
-  encontrada.votos += 1;
-  res.status(200).json({ mensagem: "Voto registrado com sucesso", opcoes });
+  // TODO (Tarefa C):
+  //  1. Leia `opcao` (texto) de req.body.
+  //  2. Procure a opção cujo `nome` seja igual a esse texto em `opcoes`.
+  //  3. Se não existir, responda 400.
+  //  4. Se existir, incremente `votos` (número) e responda 200.
+  res.status(501).json({ erro: "não implementado" });
 });
 
 module.exports = router;
