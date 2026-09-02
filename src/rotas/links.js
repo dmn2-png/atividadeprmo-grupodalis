@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 });
 
 
-router.post("/links", (req, res) => {
+router.post("/", (req, res) => {
   const { titulo, url } = req.body;
 
   if (!titulo || !url) {
